@@ -1,0 +1,36 @@
+2016-11-06 15:05:20,328 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,357 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,378 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,462 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,485 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,529 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,538 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,540 - ResourceManager : found web/IndexController.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,541 - ResourceManager : found web/DemoController.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,551 - ResourceManager : found web/log4jproperties,vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,552 - Null reference [template 'web/log4jproperties,vm', line 20, column 30] : ${catalina.base} cannot be resolved.
+2016-11-06 15:05:20,564 - ResourceManager : found spring-dao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,565 - Null reference [template 'spring-dao.vm', line 42, column 49] : ${mysql.jdbc.driver} cannot be resolved.
+2016-11-06 15:05:20,565 - Null reference [template 'spring-dao.vm', line 43, column 37] : ${mysql.jdbc.url} cannot be resolved.
+2016-11-06 15:05:20,565 - Null reference [template 'spring-dao.vm', line 44, column 42] : ${mysql.jdbc.username} cannot be resolved.
+2016-11-06 15:05:20,565 - Null reference [template 'spring-dao.vm', line 45, column 42] : ${mysql.jdbc.password} cannot be resolved.
+2016-11-06 15:05:20,566 - ResourceManager : found spring-mvc.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,573 - ResourceManager : found spring-service.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,576 - ResourceManager : found web/springmvc-spring.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,580 - ResourceManager : found db.properties.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,607 - ResourceManager : found web/springMVCPom.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-06 15:05:20,607 - Null reference [template 'web/springMVCPom.vm', line 25, column 34] : ${spring.version} cannot be resolved.
+2016-11-06 15:05:20,607 - Null reference [template 'web/springMVCPom.vm', line 31, column 34] : ${spring.version} cannot be resolved.
+2016-11-06 15:05:20,607 - Null reference [template 'web/springMVCPom.vm', line 37, column 34] : ${spring.version} cannot be resolved.
+2016-11-06 15:05:20,607 - Null reference [template 'web/springMVCPom.vm', line 43, column 34] : ${spring.version} cannot be resolved.
+2016-11-06 15:05:20,607 - Null reference [template 'web/springMVCPom.vm', line 49, column 34] : ${spring.version} cannot be resolved.
+2016-11-06 15:05:20,607 - Null reference [template 'web/springMVCPom.vm', line 55, column 34] : ${spring.version} cannot be resolved.
+2016-11-06 15:05:20,607 - Null reference [template 'web/springMVCPom.vm', line 61, column 34] : ${spring.version} cannot be resolved.
+2016-11-06 15:05:20,607 - Null reference [template 'web/springMVCPom.vm', line 67, column 34] : ${spring.version} cannot be resolved.
+2016-11-06 15:05:20,607 - Null reference [template 'web/springMVCPom.vm', line 73, column 34] : ${spring.version} cannot be resolved.
+2016-11-06 15:05:20,608 - Null reference [template 'web/springMVCPom.vm', line 79, column 34] : ${org.aspectj.version} cannot be resolved.
+2016-11-06 15:05:20,608 - Null reference [template 'web/springMVCPom.vm', line 84, column 34] : ${org.aspectj.version} cannot be resolved.
+2016-11-06 15:05:20,608 - Null reference [template 'web/springMVCPom.vm', line 103, column 34] : ${mybatis.version} cannot be resolved.
+2016-11-06 15:05:20,608 - Null reference [template 'web/springMVCPom.vm', line 197, column 34] : ${log4j.version} cannot be resolved.
+2016-11-06 15:05:20,608 - Null reference [template 'web/springMVCPom.vm', line 202, column 34] : ${slf4j.version} cannot be resolved.
+2016-11-06 15:05:20,608 - Null reference [template 'web/springMVCPom.vm', line 207, column 34] : ${slf4j.version} cannot be resolved.

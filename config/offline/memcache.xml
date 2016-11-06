@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <memcached keyPrefix="hotel58-">
+    <servers><!--
+      <add address="192.168.120.36" port="11211" />
+       <add address="192.168.120.36" port="11212" />
+    --></servers>
+    <socketPool initConn="1" minConn="10" maxConn="30" aliveCheck="true" readTimeOut="500" failover="true" maintSleep="30" nagle="false" />
+  </memcached>
+</configuration>

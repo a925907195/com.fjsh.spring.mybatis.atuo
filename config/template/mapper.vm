@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="${package}.dao.$!{table.getUpperCaseName()}Dao" >
+ <resultMap id="BaseResultMap" type="${package}.entity.$!{table.getUpperCaseName()}Entity" >
+ #foreach($col in $!table.columns)
+#if($!{col.pk}=="1")
+<id column="$!{col.dbname}" property="$!{col.javaname}" jdbcType="$!{col.dbType}" />
+#else
+<result column="$!{col.dbname}" property="$!{col.javaname}" jdbcType="$!{col.dbType}" />
+#end
+#end   
+  </resultMap>
+  <sql id="Base_Column_List" >
+  $!{columns}
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from $!{table.dbtablename}
+    where 
+     #foreach($col in $!table.columns)
+	#if($!{col.pk}=="1")
+	$!{col.dbname} = #{$!{col.javaname},jdbcType=$!{col.dbType}}
+	#end
+	#end
+  </select>
+   <select id="getListByPage" resultMap="BaseResultMap"  >
+    select 
+    <include refid="Base_Column_List" />
+    from $!{table.dbtablename}
+    LIMIT #{offset},#{size}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from $!{table.dbtablename}
+    where 
+    #foreach($col in $!table.columns)
+	#if($!{col.pk}=="1")
+	$!{col.dbname} = #{$!{col.javaname},jdbcType=$!{col.dbType}}
+	#end
+	#end
+  </delete>
+  <insert id="insert" parameterType="${package}.entity.$!{table.getUpperCaseName()}Entity" >
+    insert into $!{table.dbtablename} ($!{columns})
+    values(
+     #set($colindex = 1)
+     #foreach($col in $!table.columns)
+      #{$!{col.dbname},jdbcType=$!{col.dbType}}
+    #if( $colindex < $!table.columns.size())
+      ,
+	#end
+	#set($colindex = $colindex + 1)	
+	#end
+      )     
+  </insert>
+  <insert id="insertSelective" parameterType="${package}.entity.$!{table.getUpperCaseName()}Entity" >
+    insert into $!{table.dbtablename}
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+     #foreach($col in $!table.columns)
+      <if test="$!{col.javaname} != null" >
+        $!{col.dbname},
+      </if>	
+	#end	
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+     #foreach($col in $!table.columns)
+      <if test="$!{col.javaname} != null" >
+        #{$!{col.javaname},jdbcType=$!{col.dbType}},
+      </if>
+	#end
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="${package}.entity.$!{table.getUpperCaseName()}Entity" >
+    update $!{table.dbtablename}
+    <set >
+     #foreach($col in $!table.columns)
+     <if test="$!{col.javaname} != null" >
+        $!{col.dbname} = #{$!{col.javaname},jdbcType=$!{col.dbType}},
+      </if>
+	#end     
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="${package}.entity.$!{table.getUpperCaseName()}Entity" >
+    update $!{table.dbtablename}
+    set
+     #set($colupindex = 1)
+     #foreach($col in $!table.columns)
+      $!{col.dbname} = #{$!{col.javaname},jdbcType=$!{col.dbType}}     
+    #if( $colupindex < $!table.columns.size())
+      ,
+	#end
+	#set($colupindex = $colupindex + 1)	
+	#end	
+    where 
+ #foreach($col in $!table.columns)
+	#if($!{col.pk}=="1")
+	$!{col.dbname} = #{$!{col.javaname},jdbcType=$!{col.dbType}}
+	#end
+	#end
+  </update>
+</mapper>

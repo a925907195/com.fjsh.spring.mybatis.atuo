@@ -1,0 +1,61 @@
+package ${package}.service;
+
+import ${package}.entity.$!{table.getUpperCaseName()}Entity;
+import java.util.List;
+
+/**
+ * ClassName：$!{table.getUpperCaseName()}Service<br>
+ * Description：数据库中 $!{table.dbtablename}表对应的实体类        .<br>
+ * @author auto
+ * @Date ${datetime}
+ * @since JRE 1.6.0_22  or higher
+ */
+public interface $!{table.getUpperCaseName()}Service {
+    /**
+     * 根据主键id删除数据
+     * @param id
+     * @return
+     */
+    int deleteByPrimaryKey(Long id);
+
+    /**
+     * 插入数据
+     * @param entity
+     * @return
+     */
+    int insert($!{table.getUpperCaseName()}Entity entity);
+
+    /**
+     * 根据已有数据的列插入数据
+     * @param entity
+     * @return
+     */
+    int insertSelective($!{table.getUpperCaseName()}Entity entity);
+
+    /**
+     * 根据主键id获取实体
+     * @param id
+     * @return
+     */
+    $!{table.getUpperCaseName()}Entity selectByPrimaryKey(Long id);
+
+    /**
+     * 根据已有数据的列更新数据
+     * @param entity
+     * @return
+     */
+    int updateByPrimaryKeySelective($!{table.getUpperCaseName()}Entity entity);
+
+    /**
+     * 更新实体信息
+     * @param entity
+     * @return
+     */
+    int updateByPrimaryKey($!{table.getUpperCaseName()}Entity entity);   
+        /**分页查询
+     * @param offset
+     * @param size
+     * @return
+     */
+    List<$!{table.getUpperCaseName()}Entity>  getListByPage(int offset,int size);
+}

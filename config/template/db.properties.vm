@@ -1,0 +1,4 @@
+mysql.jdbc.driver=$!{driversClass}
+mysql.jdbc.url=$!{connetionURL}
+mysql.jdbc.username=$!{userName}
+mysql.jdbc.password=$!{passWord}

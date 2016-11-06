@@ -1,0 +1,36 @@
+package ${package}.entity;
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * ClassName：$!{table.getUpperCaseName()}Entity<br>
+ * Description：数据库中 $!{table.dbtablename}表对应的实体类        .<br>
+ * @author auto
+ * @Date ${datetime}
+ * @since JRE 1.6.0_22  or higher
+ */
+public class $!{table.getUpperCaseName()}Entity  implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	#foreach($col in $!table.columns)
+	
+		/**
+		 * $!{col.desc}
+		 */
+		#if($!{col.pk}=="1")		
+		#end		
+		private $!{col.javaType} $!{col.javaname};
+	#end
+	
+	
+	#foreach($col in $!table.columns)
+		public $!{col.javaType} get$!{col.getUpperCol("${col.javaname}")}() {
+			return $!{col.javaname};
+		}
+		public void set$!{col.getUpperCol("${col.javaname}")}($!{col.javaType} $!{col.javaname}) {
+			this.$!{col.javaname} = $!{col.javaname};
+		}
+	#end
+	
+	
+}

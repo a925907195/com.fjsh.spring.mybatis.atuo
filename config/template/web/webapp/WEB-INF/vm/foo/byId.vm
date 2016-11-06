@@ -1,0 +1,7 @@
+${foo.username}
+
+$date.format($doo)
+
+<font>$doo</font>
+
+$esc.html("<font>Hello</font>")

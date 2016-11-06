@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Spring MVC and Velocity</title>
+    </head>
+    <body>
+        <h1>Spring MVC and Velocity</h1>
+<ul>
+    #foreach($demo in $list)
+        <li>id:${demo.id}--name:$!{demo.name}"</li>
+    #end
+</ul>
+        <hr />
+        Copyright &copy 2016 fjsh
+    </body>
+</html>

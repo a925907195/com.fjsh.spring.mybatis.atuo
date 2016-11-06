@@ -1,0 +1,61 @@
+package ${package}.service.impl;
+import java.util.List;
+import javax.annotation.Resource;
+import org.springframework.stereotype.Service;
+import ${package}.dao.$!{table.getUpperCaseName()}Dao;
+import ${package}.entity.$!{table.getUpperCaseName()}Entity;
+import ${package}.service.$!{table.getUpperCaseName()}Service;
+
+/**
+ * ClassName：$!{table.getUpperCaseName()}ServiceImpl<br>
+ * Description：数据库中$!{table.dbtablename}表对应的实体类        .<br>
+ * @author auto
+ * @Date ${datetime}
+ * @since JRE 1.6.0_22  or higher
+ */
+@Service
+public class $!{table.getUpperCaseName()}ServiceImpl implements $!{table.getUpperCaseName()}Service {
+
+	@Resource
+	private $!{table.getUpperCaseName()}Dao $!{table.getLowerCaseName()}Dao;
+	@Override
+	public int deleteByPrimaryKey(Long id) {
+		// TODO Auto-generated method stub
+		return $!{table.getLowerCaseName()}Dao.deleteByPrimaryKey(id);
+	}
+
+	@Override
+	public int insert($!{table.getUpperCaseName()}Entity entity) {
+		// TODO Auto-generated method stub
+		return $!{table.getLowerCaseName()}Dao.insert(entity);
+	}
+
+	@Override
+	public int insertSelective($!{table.getUpperCaseName()}Entity entity) {
+		// TODO Auto-generated method stub
+		return $!{table.getLowerCaseName()}Dao.insertSelective(entity);
+	}
+
+	@Override
+	public $!{table.getUpperCaseName()}Entity selectByPrimaryKey(Long id) {
+		// TODO Auto-generated method stub
+		return $!{table.getLowerCaseName()}Dao.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public int updateByPrimaryKeySelective($!{table.getUpperCaseName()}Entity entity) {
+		// TODO Auto-generated method stub
+		return $!{table.getLowerCaseName()}Dao.updateByPrimaryKeySelective(entity);
+	}
+
+	@Override
+	public int updateByPrimaryKey($!{table.getUpperCaseName()}Entity entity) {
+		// TODO Auto-generated method stub
+		return $!{table.getLowerCaseName()}Dao.updateByPrimaryKey(entity);
+	}
+	@Override
+	public List<$!{table.getUpperCaseName()}Entity> getListByPage(int offset, int size) {
+		// TODO Auto-generated method stub
+		return $!{table.getLowerCaseName()}Dao.getListByPage(offset, size);
+	}
+}

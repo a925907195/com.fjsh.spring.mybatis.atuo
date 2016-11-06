@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <memcached keyPrefix="shop58-">
+    <servers>
+      <!--<add address="shop21.cache.58dns.org" port="11211" />
+      <add address="shop22.cache.58dns.org" port="11211" />
+    --></servers>
+    <socketPool initConn="10" minConn="5" maxConn="250" aliveCheck="true" readTimeOut="3000" failover="true" maintSleep="30" nagle="false" />
+  </memcached>
+</configuration>

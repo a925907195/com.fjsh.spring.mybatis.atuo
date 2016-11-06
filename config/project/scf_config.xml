@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<configuration>
+
+<!-- service name -->
+<property>
+<name>scf.service.name</name>
+<value>test</value>
+</property>
+
+<!-- socket server listent port -->
+<property>
+<name>scf.server.tcp.listenPort</name>
+<value>14000</value>
+</property>
+
+<!-- telnet server listent port -->
+<property>
+<name>scf.server.telnet.listenPort</name>
+<value>24000</value>
+</property>
+
+<!-- socket server worder thread count -->
+<property>
+<name>scf.server.tcp.workerCount</name>
+<value>8</value>
+</property>
+
+
+<!-- async worker count-->
+<property>
+<name>scf.async.worker.count</name>
+<value>64</value>
+</property>
+
+
+</configuration>
