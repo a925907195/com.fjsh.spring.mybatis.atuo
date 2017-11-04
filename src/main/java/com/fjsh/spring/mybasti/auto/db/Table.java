@@ -39,7 +39,6 @@ public class Table {
 	}
 
 	private List<Column> columns=new ArrayList<Column>();
-
 	public String getTablename() {
 		return tablename;
 	}
@@ -51,6 +50,7 @@ public class Table {
 	public List<Column> getColumns() {
 		return columns;
 	}
+
 
 	public void setColumns(List<Column> columns) {
 		this.columns = columns;

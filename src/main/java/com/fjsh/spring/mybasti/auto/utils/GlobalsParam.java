@@ -27,6 +27,8 @@ public class GlobalsParam {
 	private static Properties preferences = new Properties();
 	public static String ENTITY_FILEPATH;
 	public static String ENTITY_DAOFILEPATH ;
+	public static String ENTITY_REPOSITORYFILEPATH ;
+	public static String ENTITY_DYSQLFILEPATH;
 	public static String ENTITY_SERVICEFILEPATH ;
 	public static String ENTITY_SERVICE_IMPLFILEPATH ;
 	public static String DEV_PROPERTIES ;
@@ -46,8 +48,22 @@ public class GlobalsParam {
 						"\\.", "/")
 				+ "/"
 				+ GlobalsParam.getPreference("basepackage").replaceAll("\\.",
-						"/") + "/" + "dao";	
-        ENTITY_SERVICEFILEPATH = GlobalsParam.getPreference("outputfolder")
+						"/") + "/" + "dao";
+		ENTITY_DYSQLFILEPATH = GlobalsParam.getPreference("outputfolder")
+				+ "/"
+				+ GlobalsParam.getPreference("basejavafolder").replaceAll(
+				"\\.", "/")
+				+ "/"
+				+ GlobalsParam.getPreference("basepackage").replaceAll("\\.",
+				"/") + "/" + "dynamicsql";
+		ENTITY_REPOSITORYFILEPATH = GlobalsParam.getPreference("outputfolder")
+				+ "/"
+				+ GlobalsParam.getPreference("basejavafolder").replaceAll(
+				"\\.", "/")
+				+ "/"
+				+ GlobalsParam.getPreference("basepackage").replaceAll("\\.",
+				"/") + "/" + "repository";
+		ENTITY_SERVICEFILEPATH = GlobalsParam.getPreference("outputfolder")
 				+ "/"
 				+ GlobalsParam.getPreference("basejavafolder").replaceAll(
 						"\\.", "/")

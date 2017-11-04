@@ -1,0 +1,85 @@
+package ${package}.dynamicsql;
+
+import org.apache.ibatis.jdbc.SQL;
+import java.util.*;
+/**
+ * Description：数据库中 $!{table.dbtablename}表对应的动态sql语句
+ * @author auto
+ * @Date ${datetime}
+ * @since JRE 1.6.0_22  or higher
+ */
+public class $!{table.getUpperCaseName()}Sql {
+#*    private  static List strTypeList = Arrays.asList("VARCHAR","CHAR","DATE","TIMESTAMP");
+    private static HashMap<String, String> dbColumnmap = new HashMap<String, String>() {
+        {
+            #foreach($col in $!table.columns)put("$!{col.dbname}", "$!{col.dbType}");
+            #end
+
+        }
+    };*#
+    /**
+     * 根据条件进行查询，返回列表
+     * @param columns 返回的字段，null或空默认返回所有
+     * @param where 查询条件，正常拼接 where条件，默认为空
+     * @param limit 查询返回数量，如：0,1 默认返回所有
+     * @return
+     */
+    public String getListByCondSql(final String columns,final String where,final  String orderby,final String limit) {
+        String limitSql="";
+        if(!(null==limit||limit.trim().equals("")))
+        {
+            limitSql=" limit "+limit;
+        }
+        String orderbySql="";
+        if(!(null==orderby||orderby.trim().equals("")))
+        {
+        orderbySql=" order by "+orderby;
+        }
+        return new SQL(){
+            {
+                if(!(null==columns||columns.trim().equals("")))
+                {
+                    SELECT(columns);
+                }else {
+                    SELECT("*");
+                }
+                FROM("$!{table.dbtablename}");
+                if(!(null==where||where.trim().equals("")))
+                {
+                     WHERE(where);
+                }
+            }
+        }.toString()+orderbySql+limitSql;
+    }
+    /**
+    * 根据条件进行查询，返回数量
+    * @param where 查询条件，正常拼接 where条件，默认为空
+    * @return
+    */
+    public String getCountByCondSql(final String where) {
+        return new SQL(){
+            {
+                SELECT("count(*)");
+                FROM("$!{table.dbtablename}");
+                if(!(null==where||where.trim().equals("")))
+                {
+                     WHERE(where);
+                }
+            }
+        }.toString();
+    }
+#*    /**
+     * 插入数据
+     * @param entity
+     * @return
+     */*#
+   #* @Insert("insert into $!{table.dbtablename} ($!{springbootcolumns})" +
+    "values(#set($colindex = 1)
+#foreach($col in $!table.columns)
+    #if($!{col.pk}=="1")#else#{$!{col.javaname},jdbcType=$!{col.dbType}}#end
+    #if($colindex < $!table.columns.size() && $!{col.pk}!="1"),#end
+    #set($colindex = $colindex + 1)
+#end)")
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    int insert($!{table.getUpperCaseName()}Entity entity);*#
+}

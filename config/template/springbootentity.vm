@@ -1,0 +1,22 @@
+package ${package}.entity;
+import lombok.Data;
+import java.util.Date;
+
+/**
+ * ClassName：$!{table.getUpperCaseName()}Entity
+ * Description：数据库中 $!{table.dbtablename}表对应的实体类
+ * @author auto
+ * @Date ${datetime}
+ * @since JRE 1.6.0_22  or higher
+ */
+@Data
+public class $!{table.getUpperCaseName()}Entity  {
+#foreach($col in $!table.columns)
+    /**
+	     * $!{col.desc}
+	     */
+	#if($!{col.pk}=="1")#end
+    private $!{col.javaType} $!{col.javaname};
+	#end
+
+}

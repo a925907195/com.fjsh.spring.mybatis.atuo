@@ -16,7 +16,7 @@ import com.fjsh.spring.mybasti.auto.utils.GlobalsParam;
 /**
 *@Title:springMVCCreator
 *TODO:web工程生成
-*@Description: 
+*@Description: 基于配置文件的方式生成代码，并带有部分模板，在idea编辑器下要去掉
 *@author:a925907195@qq.com
 *@date 2016年11月6日 下午2:57:47
 *

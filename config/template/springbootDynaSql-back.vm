@@ -1,0 +1,76 @@
+package ${package}.dynamicsql;
+
+import org.apache.ibatis.jdbc.SQL;
+import java.util.*;
+/**
+ * Description：数据库中 $!{table.dbtablename}表对应的动态sql语句
+ * @author auto
+ * @Date ${datetime}
+ * @since JRE 1.6.0_22  or higher
+ */
+public class $!{table.getUpperCaseName()}Sql {
+    private  static List strTypeList = Arrays.asList("VARCHAR","CHAR","DATE","TIMESTAMP");
+    private static HashMap<String, String> dbColumnmap = new HashMap<String, String>() {
+        {
+            #foreach($col in $!table.columns)put("$!{col.dbname}", "$!{col.dbType}");
+            #end
+
+        }
+    };
+    /**
+     * 根据条件进行简单查询，如果需要获取部分column的返回信息则在map对象中加入返回的指定字段,默认返回所有字段
+     * 例如返回的字段只需要在selectColumns中加入需要返回的字段，则在map中加入key->selectColumns，value->columns 字段
+     * 如果要返回指定数量的数据，则指定limit，如：key->limit,value->0,10  默认返回所有的
+     * @param parameters 查询参数，map对象
+     * @return
+     */
+    public String getSelectByParamsSql(final Map<String, Object> parameters) {
+        String limitSql="";
+        if(parameters.containsKey("limit"))
+        {
+            limitSql=" limit "+parameters.get("limit");
+        }
+        return new SQL(){
+            {
+               if(parameters.containsKey("selectColumns")){
+                   SELECT(parameters.get("selectColumns").toString());
+               }else {
+                  SELECT("*");
+               }
+                FROM("$!{table.dbtablename}");
+                Iterator iter = parameters.entrySet().iterator();
+                while (iter.hasNext()) {
+                    Map.Entry entry = (Map.Entry) iter.next();
+                    if(dbColumnmap.containsKey(entry.getKey()))
+                    {
+                        if(strTypeList.contains(dbColumnmap.get(entry.getKey())))
+                        {
+                             WHERE(entry.getKey()+"='" + entry.getValue() + "'");
+                        }
+                        else {
+                             WHERE(entry.getKey()+"=" + entry.getValue());
+                        }
+                    }
+                }
+            }
+        }.toString()+limitSql;
+    }
+
+    /**
+     * 插入数据
+     * @param entity
+     * @return
+     */
+   #* @Insert("insert into $!{table.dbtablename} ($!{springbootcolumns})" +
+    "values(#set($colindex = 1)
+#foreach($col in $!table.columns)
+    #if($!{col.pk}=="1")#else#{$!{col.javaname},jdbcType=$!{col.dbType}}#end
+    #if($colindex < $!table.columns.size() && $!{col.pk}!="1"),#end
+    #set($colindex = $colindex + 1)
+#end)")
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    int insert($!{table.getUpperCaseName()}Entity entity);*#
+
+
+
+}

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.spring.mybatis.user.web.dao.UserAreaDao" >
+ <resultMap id="BaseResultMap" type="com.spring.mybatis.user.web.entity.UserAreaEntity" >
+ <id column="id" property="id" jdbcType="BIGINT" />
+<result column="name" property="name" jdbcType="VARCHAR" />
+<result column="sex" property="sex" jdbcType="VARCHAR" />
+<result column="age" property="age" jdbcType="VARCHAR" />
+<result column="phone" property="phone" jdbcType="VARCHAR" />
+<result column="areacompid" property="areacompid" jdbcType="BIGINT" />
+<result column="status" property="status" jdbcType="TINYINT" />
+<result column="remark" property="remark" jdbcType="VARCHAR" />
+<result column="addtime" property="addtime" jdbcType="TIMESTAMP" />
+<result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+  id,name,sex,age,phone,areacompid,status,remark,addtime,updatetime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_area
+    where 
+     		id = #{id,jdbcType=BIGINT}
+																				  </select>
+   <select id="getListByPage" resultMap="BaseResultMap"  >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_area
+    LIMIT #{offset},#{size}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_user_area
+    where 
+    		id = #{id,jdbcType=BIGINT}
+																				  </delete>
+  <insert id="insert" parameterType="com.spring.mybatis.user.web.entity.UserAreaEntity" >
+    insert into t_user_area (id,name,sex,age,phone,areacompid,status,remark,addtime,updatetime)
+    values(
+                #{id,jdbcType=BIGINT}
+          ,
+		      #{name,jdbcType=VARCHAR}
+          ,
+		      #{sex,jdbcType=VARCHAR}
+          ,
+		      #{age,jdbcType=VARCHAR}
+          ,
+		      #{phone,jdbcType=VARCHAR}
+          ,
+		      #{areacompid,jdbcType=BIGINT}
+          ,
+		      #{status,jdbcType=TINYINT}
+          ,
+		      #{remark,jdbcType=VARCHAR}
+          ,
+		      #{addtime,jdbcType=TIMESTAMP}
+          ,
+		      #{updatetime,jdbcType=TIMESTAMP}
+    	      )     
+  </insert>
+  <insert id="insertSelective" parameterType="com.spring.mybatis.user.web.entity.UserAreaEntity" >
+    insert into t_user_area
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+           <if test="id != null" >
+        id,
+      </if>	
+	      <if test="name != null" >
+        name,
+      </if>	
+	      <if test="sex != null" >
+        sex,
+      </if>	
+	      <if test="age != null" >
+        age,
+      </if>	
+	      <if test="phone != null" >
+        phone,
+      </if>	
+	      <if test="areacompid != null" >
+        areacompid,
+      </if>	
+	      <if test="status != null" >
+        status,
+      </if>	
+	      <if test="remark != null" >
+        remark,
+      </if>	
+	      <if test="addtime != null" >
+        addtime,
+      </if>	
+	      <if test="updatetime != null" >
+        updatetime,
+      </if>	
+	    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+           <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+	      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+	      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+	      <if test="age != null" >
+        #{age,jdbcType=VARCHAR},
+      </if>
+	      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+	      <if test="areacompid != null" >
+        #{areacompid,jdbcType=BIGINT},
+      </if>
+	      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+	      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+	      <if test="addtime != null" >
+        #{addtime,jdbcType=TIMESTAMP},
+      </if>
+	      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+	    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.spring.mybatis.user.web.entity.UserAreaEntity" >
+    update t_user_area
+    <set >
+          <if test="id != null" >
+        id = #{id,jdbcType=BIGINT},
+      </if>
+	     <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+	     <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+	     <if test="age != null" >
+        age = #{age,jdbcType=VARCHAR},
+      </if>
+	     <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+	     <if test="areacompid != null" >
+        areacompid = #{areacompid,jdbcType=BIGINT},
+      </if>
+	     <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
+      </if>
+	     <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+	     <if test="addtime != null" >
+        addtime = #{addtime,jdbcType=TIMESTAMP},
+      </if>
+	     <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+	    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.spring.mybatis.user.web.entity.UserAreaEntity" >
+    update t_user_area
+    set
+                id = #{id,jdbcType=BIGINT}     
+          ,
+		      name = #{name,jdbcType=VARCHAR}     
+          ,
+		      sex = #{sex,jdbcType=VARCHAR}     
+          ,
+		      age = #{age,jdbcType=VARCHAR}     
+          ,
+		      phone = #{phone,jdbcType=VARCHAR}     
+          ,
+		      areacompid = #{areacompid,jdbcType=BIGINT}     
+          ,
+		      status = #{status,jdbcType=TINYINT}     
+          ,
+		      remark = #{remark,jdbcType=VARCHAR}     
+          ,
+		      addtime = #{addtime,jdbcType=TIMESTAMP}     
+          ,
+		      updatetime = #{updatetime,jdbcType=TIMESTAMP}     
+    	    where 
+ 		id = #{id,jdbcType=BIGINT}
+																				  </update>
+</mapper>

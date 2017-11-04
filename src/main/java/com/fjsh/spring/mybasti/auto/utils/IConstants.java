@@ -20,7 +20,7 @@ public interface IConstants {
 	String SYMBOL_SLASH = "/";	 
 	String LOG4J_PROPERTIES=BASE_DIR+SYMBOL_SLASH+"config/log4j.properties";
 	String SYSTEM_GLOBAL_PROPERTIES=BASE_DIR+SYMBOL_SLASH+"config"+SYMBOL_SLASH+SYSTEM_GLOBALS_FILE;	
-	String CURRENT_TIME=DateTimeUtil.dateToStrOfYmdHmsFormat(new Date());
+	String CURRENT_TIME=DateTimeUtil.dateToStrOfDefaulfFormat(new Date());
 	String VELOCITY_PROPERTIES=BASE_DIR+SYMBOL_SLASH+"config/velocity.properties";
 	
     String SCF_CONFIG_NAME = "scf.config";

@@ -15,7 +15,7 @@ import com.fjsh.spring.mybasti.auto.utils.GlobalsParam;
 /**
 *@Title:JarServerCreator
 *TODO:jar工程生成
-*@Description: 
+*@Description: 基于配置文件生成jar程序
 *@author:a925907195@qq.com
 *@date 2016年11月6日 下午2:58:01
 *

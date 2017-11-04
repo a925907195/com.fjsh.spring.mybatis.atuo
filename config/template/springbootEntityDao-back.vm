@@ -1,0 +1,104 @@
+package ${package}.repository;
+
+import ${package}.entity.$!{table.getUpperCaseName()}Entity;
+import java.util.List;
+import java.util.Map;
+import org.apache.ibatis.annotations.*;
+/**
+ * ClassName：$!{table.getUpperCaseName()}Mapper
+ * Description：数据库中 $!{table.dbtablename}表对应的实体类
+ * @author auto
+ * @Date ${datetime}
+ * @since JRE 1.6.0_22  or higher
+ */
+public interface $!{table.getUpperCaseName()}Mapper {
+    /**
+     * 根据主键id删除数据
+     * @param id
+     * @return
+     */
+    @Delete("DELETE FROM table.dbtablename WHERE id = #{id}")
+    int deleteByPrimaryKey(Long id);
+
+    /**
+     * 插入数据
+     * @param entity
+     * @return
+     */
+    @Insert("insert into $!{table.dbtablename} ($!{springbootcolumns})" +
+    "values(#set($colindex = 1)#foreach($col in $!table.columns)#if($!{col.pk}=="1")#else#{$!{col.javaname},jdbcType=$!{col.dbType}}#end #if($colindex < $!table.columns.size() && $!{col.pk}!="1"),#end #set($colindex = $colindex + 1)#end)")
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    int insert($!{table.getUpperCaseName()}Entity entity);
+
+    /**
+     * 根据已有数据的列插入数据
+     * @param entity
+     * @return
+     */
+    //int insertSelective($!{table.getUpperCaseName()}Entity entity);
+
+    /**
+     * 根据主键id获取实体
+     * @param id
+     * @return
+     */
+    @Results({
+    #set($colindex = 1)#foreach($col in $!table.columns)
+        @Result(property = "$!{col.javaname}", column = "$!{col.dbname}")#if( $colindex < $!table.columns.size()),
+    #end #set($colindex = $colindex + 1)#end
+    })
+    @Select("SELECT * FROM $!{table.dbtablename} WHERE id = #{id} limit 1")
+    $!{table.getUpperCaseName()}Entity selectByPrimaryKey(Long id);
+
+    /**
+    * 分页获取数据集合
+    * @param offset 记录开始值
+    * @param size 数量
+    * @return
+    */
+    @Results({
+    #set($colindex = 1)#foreach($col in $!table.columns)
+    @Result(property = "$!{col.javaname}", column = "$!{col.dbname}")#if( $colindex < $!table.columns.size()),
+    #end #set($colindex = $colindex + 1)#end
+    })
+    @Select("SELECT * FROM $!{table.dbtablename}  limit #{offset},#{size}")
+    List<$!{table.getUpperCaseName()}Entity> findAllByPages(@Param("offset") int offset,@Param("size") int size);
+
+    /**
+    * 根据条件进行简单查询，如果需要获取部分column的返回信息则在map对象中加入返回的指定字段,默认返回所有字段
+    * 例如返回的字段只需要在selectColumns中加入需要返回的字段，则在map中加入key->selectColumns，value->columns字段
+    * 如果要返回指定数量的数据，则指定limit，如：key->limit,value->0,10  默认返回所有的
+    * 只提供参数等于操作
+    * @param parameters 查询参数，map对象
+    * @return
+    */
+    @Results({
+    #set($colindex = 1)#foreach($col in $!table.columns)
+        @Result(property = "$!{col.javaname}", column = "$!{col.dbname}")#if( $colindex < $!table.columns.size()),
+        #end #set($colindex = $colindex + 1)#end
+    })
+    @SelectProvider(type=$!{table.getUpperCaseName()}Sql.class, method="getSelectByParamsSql")
+    List<StagestatusEntity> GetListByParams(Map<String, Object> parameters);
+
+        /**
+     * 根据已有数据的列更新数据
+     * @param entity
+     * @return
+     */
+    //int updateByPrimaryKeySelective($!{table.getUpperCaseName()}Entity entity);
+
+    /**
+     * 更新实体信息
+     * @param entity
+     * @return
+     */
+    @Update("update $!{table.dbtablename} set #set($colindex = 1)#foreach($col in $!table.columns)#if($!{col.pk}=="1")#else $!{col.dbname}=#{$!{col.javaname},jdbcType=$!{col.dbType}}#end #if( $colindex < $!table.columns.size() && $!{col.pk}!="1"),#end #set($colindex = $colindex + 1)#end  where id=#{id}")
+    int updateByPrimaryKey($!{table.getUpperCaseName()}Entity entity);
+
+    /**
+    * 简单count查询
+    * @return size
+    */
+    @Select("SELECT count(*) FROM $!{table.dbtablename} ")
+    int getCount();
+}
