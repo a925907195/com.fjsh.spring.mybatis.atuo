@@ -1,0 +1,54 @@
+package ${package}.service;
+
+import static org.junit.Assert.fail;
+import javax.annotation.Resource;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import ${package}.main.StartApp;
+import ${package}.repository.$!{table.getUpperCaseName()}Mapper;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = StartApp.class)
+@WebAppConfiguration
+public class $!{table.getUpperCaseName()}MapperTest {
+
+	@Resource
+	$!{table.getUpperCaseName()}Mapper $!{table.getLowerCaseName()}Mapper;
+	@Test
+	public void testGetCount() {
+		System.out.println($!{table.getLowerCaseName()}Mapper.getCount());
+	}
+	@Test
+	public void testDeleteByPrimaryKey() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testInsert() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testInsertSelective() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSelectByPrimaryKey() {
+		//$!{table.getLowerCaseName()}Mapper.selectByPrimaryKey(1l);
+	}
+
+	@Test
+	public void testUpdateByPrimaryKeySelective() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpdateByPrimaryKey() {
+		fail("Not yet implemented");
+	}
+
+}

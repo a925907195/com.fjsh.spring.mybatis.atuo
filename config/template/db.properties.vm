@@ -2,3 +2,6 @@ mysql.jdbc.driver=$!{driversClass}
 mysql.jdbc.url=$!{connetionURL}
 mysql.jdbc.username=$!{userName}
 mysql.jdbc.password=$!{passWord}
+spring.datasource.max-active=10
+spring.datasource.max-idle=5
+spring.datasource.min-idle=0

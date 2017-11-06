@@ -35,10 +35,19 @@ public class GlobalsParam {
 	public static String TEST_SERVICE ;
 	public static String DEV_CONTROLLER ;
 	public static String RESOURCE_FOLDER;
+	public static String ENTITY_MAINFILEPATH;
+	public static String BASEFILEPATH;
 	public static void init()
 	{		
 		PropertyConfigurator.configure(IConstants.LOG4J_PROPERTIES);
         GlobalsParam.loadConfig(new File(IConstants.SYSTEM_GLOBAL_PROPERTIES));
+		BASEFILEPATH = GlobalsParam.getPreference("outputfolder")
+				+ "/"
+				+ GlobalsParam.getPreference("basejavafolder").replaceAll(
+				"\\.", "/")
+				+ "/"
+				+ GlobalsParam.getPreference("basepackage").replaceAll("\\.",
+				"/") ;
         ENTITY_FILEPATH = GlobalsParam.getPreference("outputfolder")	+ "/"
     			+ GlobalsParam.getPreference("basejavafolder").replaceAll("\\.", "/")	+ "/"
     			+ GlobalsParam.getPreference("basepackage").replaceAll("\\.","/") + "/" + "entity";
@@ -49,6 +58,13 @@ public class GlobalsParam {
 				+ "/"
 				+ GlobalsParam.getPreference("basepackage").replaceAll("\\.",
 						"/") + "/" + "dao";
+		ENTITY_MAINFILEPATH = GlobalsParam.getPreference("outputfolder")
+				+ "/"
+				+ GlobalsParam.getPreference("basejavafolder").replaceAll(
+				"\\.", "/")
+				+ "/"
+				+ GlobalsParam.getPreference("basepackage").replaceAll("\\.",
+				"/") + "/" + "main";
 		ENTITY_DYSQLFILEPATH = GlobalsParam.getPreference("outputfolder")
 				+ "/"
 				+ GlobalsParam.getPreference("basejavafolder").replaceAll(

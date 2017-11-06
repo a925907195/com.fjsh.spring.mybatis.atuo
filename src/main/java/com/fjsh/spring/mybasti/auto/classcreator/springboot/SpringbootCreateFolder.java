@@ -1,4 +1,4 @@
-package com.fjsh.spring.mybasti.auto.classcreator;
+package com.fjsh.spring.mybasti.auto.classcreator.springboot;
 
 import com.fjsh.spring.mybasti.auto.utils.GlobalsParam;
 
@@ -52,7 +52,7 @@ public class SpringbootCreateFolder {
 		f = new File(folder);
 		if (!f.exists())
 			f.mkdirs();
-		//create service folder
+		//create dynamicsql folder
 		folder = GlobalsParam.getPreference("outputfolder")
 				+ "/"
 				+ GlobalsParam.getPreference("basejavafolder").replaceAll(
@@ -63,28 +63,18 @@ public class SpringbootCreateFolder {
 		f = new File(folder);
 		if (!f.exists())
 			f.mkdirs();
-		//create service folder
+		//create main folder
 		folder = GlobalsParam.getPreference("outputfolder")
 				+ "/"
 				+ GlobalsParam.getPreference("basejavafolder").replaceAll(
-						"\\.", "/")
+				"\\.", "/")
 				+ "/"
 				+ GlobalsParam.getPreference("basepackage").replaceAll("\\.",
-						"/") + "/" + "service";
+				"/") + "/" + "main";
 		f = new File(folder);
 		if (!f.exists())
 			f.mkdirs();
-		//create serviceimpl folder
-		folder = GlobalsParam.getPreference("outputfolder")
-				+ "/"
-				+ GlobalsParam.getPreference("basejavafolder").replaceAll(
-						"\\.", "/")
-				+ "/"
-				+ GlobalsParam.getPreference("basepackage").replaceAll("\\.",
-						"/") + "/" + "service/impl";
-		f = new File(folder);
-		if (!f.exists())
-			f.mkdirs();
+
 
 		folder = GlobalsParam.getPreference("outputfolder")
 				+ "/"
@@ -114,24 +104,7 @@ public class SpringbootCreateFolder {
 //		f = new File(folder);
 //		if (!f.exists())
 //			f.mkdirs();
-		
-	
-		folder = GlobalsParam.getPreference("outputfolder")
-				+ "/"
-				+ GlobalsParam.getPreference("baseresourcesfolder").replaceAll(
-						"\\.", "/") + "/META-INF";
-		f = new File(folder);
-		if (!f.exists())
-			f.mkdirs();
-		
-		folder = GlobalsParam.getPreference("outputfolder")
-				+ "/"
-				+ GlobalsParam.getPreference("baseresourcesfolder").replaceAll(
-						"\\.", "/") + "/"+ GlobalsParam.getPreference("Mappersfolder");	
-		f = new File(folder);
-		if (!f.exists())
-			f.mkdirs();
-		
+
 		// 生成实体目录		
 		 f = new File(GlobalsParam.ENTITY_FILEPATH);
 		if (!f.exists())

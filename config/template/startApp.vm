@@ -1,0 +1,23 @@
+package ${package}.main;
+import ${package}.JpaConfig;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Import;
+
+/**
+ * ClassName：StartApp
+ * @author auto
+ * @Date ${datetime}
+ * @since JRE 1.6.0_22  or higher
+ */
+@SpringBootApplication
+@EnableAutoConfiguration
+@ComponentScan(value = { "${package}"})
+@Import(value = {JpaConfig.class})
+public class StartApp  {
+    public static void main(String[] args) {
+         SpringApplication.run(StartApp.class, args);
+    }
+}

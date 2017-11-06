@@ -1,0 +1,11 @@
+spring.datasource.driverClassName=$!{driversClass}
+spring.datasource.url=$!{connetionURL}
+spring.datasource.username=$!{userName}
+spring.datasource.password=$!{passWord}
+spring.datasource.max-active=10
+spring.datasource.max-idle=5
+spring.datasource.min-idle=0
+hibernate.dialect=mysql
+
+
+logging.level.org.hibernate.SQL=debug
