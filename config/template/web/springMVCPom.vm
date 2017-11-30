@@ -225,9 +225,7 @@
                 <artifactId>maven-resources-plugin</artifactId>  
                 <version>2.6</version>  
                 <configuration>  
-                 <source>1.7</source>
-				<target>1.7</target>
-			    <encoding>UTF-8</encoding><!-- 指定编码格式，否则在DOS下运行mvn compile命令时会出现莫名的错误，因为系统默认使用GBK编码 -->  
+			    <encoding>UTF-8</encoding><!-- 指定编码格式，否则在DOS下运行mvn compile命令时会出现莫名的错误，因为系统默认使用GBK编码 -->
 			   </configuration>
             </plugin>  
 			<plugin>
@@ -256,14 +254,14 @@
 					<scanIntervalSeconds>0</scanIntervalSeconds>
 					<connectors>
 						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-							<port>80</port>
+							<port>8080</port>
 							<maxIdleTime>60000</maxIdleTime>
 						</connector>
 					</connectors>
-					<webAppConfig>
+					#*<webAppConfig>
 						<contextPath>/</contextPath>
 						<defaultsDescriptor>src/test/resources/webdefault.xml</defaultsDescriptor>
-					</webAppConfig>
+					</webAppConfig>*#
 				</configuration>
 			</plugin>
 		</plugins>

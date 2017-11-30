@@ -2,7 +2,8 @@ package ${package}.dao;
 
 import ${package}.entity.$!{table.getUpperCaseName()}Entity;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
+import java.util.Map;
+import org.apache.ibatis.annotations.*;
 /**
  * ClassName：$!{table.getUpperCaseName()}Dao<br>
  * Description：数据库中 $!{table.dbtablename}表对应的实体类        .<br>
@@ -59,4 +60,5 @@ public interface $!{table.getUpperCaseName()}Dao {
      * @return
      */
     List<$!{table.getUpperCaseName()}Entity>  getListByPage(@Param(value="offset")int offset,@Param(value="size")int size);
+
 }

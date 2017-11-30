@@ -13,27 +13,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SpringBootEntityCreater {
-	public static void createEntity(Table table) {
-		try {
-			Map<String, Object> hm = new HashMap<String, Object>();
-			hm.put("package", GlobalsParam.getPreference("basepackage"));
-			hm.put("table", table);
-			hm.put("datetime", IConstants.CURRENT_TIME);
-			String entityjava = VelocityUtils.mergeTemplate(hm,
-					"springbootentity.vm");
-			File f = new File(GlobalsParam.ENTITY_FILEPATH + "/" + table.getUpperCaseName()+"Entity.java");
-			FileOutputStream fos = new FileOutputStream(f);
-			OutputStreamWriter osw = new OutputStreamWriter(fos,
-					"UTF-8");
-			BufferedWriter bw = new BufferedWriter(osw);
-			bw.write(entityjava);
-			bw.flush();
-			bw.close();
-			fos.close();
+    public static void createEntity(Table table) {
+        try {
+            Map<String, Object> hm = new HashMap<String, Object>();
+            hm.put("package", GlobalsParam.getPreference("basepackage"));
+            hm.put("table", table);
+            hm.put("datetime", IConstants.CURRENT_TIME);
+            String entityjava = VelocityUtils.mergeTemplate(hm,
+                    "springbootentity.vm");
+            File f = new File(GlobalsParam.ENTITY_FILEPATH + "/" + table.getUpperCaseName() + "Entity.java");
+            FileOutputStream fos = new FileOutputStream(f);
+            OutputStreamWriter osw = new OutputStreamWriter(fos,
+                    "UTF-8");
+            BufferedWriter bw = new BufferedWriter(osw);
+            bw.write(entityjava);
+            bw.flush();
+            bw.close();
+            fos.close();
 
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-	}
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 
 }

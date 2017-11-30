@@ -18,6 +18,19 @@ public class $!{table.getUpperCaseName()}Sql {
         }
     };*#
     /**
+    * 根据条件进行删除，返回列表
+    */
+    public String deleteByCondSql(final String where) {
+        return new SQL() {
+            {
+                DELETE_FROM("$!{table.dbtablename}");
+                    if (!(null == where || where.trim().equals(""))) {
+                     WHERE(where);
+                }
+            }
+        }.toString();
+    }
+    /**
      * 根据条件进行查询，返回列表
      * @param columns 返回的字段，null或空默认返回所有
      * @param where 查询条件，正常拼接 where条件，默认为空

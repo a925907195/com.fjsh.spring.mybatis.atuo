@@ -81,7 +81,7 @@ public interface $!{table.getUpperCaseName()}Mapper {
     @SelectProvider(type=$!{table.getUpperCaseName()}Sql.class, method="getListByCondSql")
     List<$!{table.getUpperCaseName()}Entity> getListByCond(String columns,String where,String orderby,String limit);
 
-        /**
+    /**
      * 根据已有数据的列更新数据
      * @param entity
      * @return
@@ -102,6 +102,12 @@ public interface $!{table.getUpperCaseName()}Mapper {
     */
     @SelectProvider(type=$!{table.getUpperCaseName()}Sql.class, method="getCountByCondSql")
     int getCountByCond(String where);
+    /**
+    *根据条件删除
+    * @param where 查询条件 默认为空
+    */
+    @DeleteProvider(type=$!{table.getUpperCaseName()}Sql.class, method="deleteByCondSql")
+    int deleteByCond(String where);
     /**
     * 简单count查询
     * @return size

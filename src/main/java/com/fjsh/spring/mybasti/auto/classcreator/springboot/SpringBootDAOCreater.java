@@ -22,9 +22,9 @@ public class SpringBootDAOCreater {
 			hm.put("table", table);
 			hm.put("datetime", IConstants.CURRENT_TIME);
 			hm.put("columns", StringUtils.listToString(table.getColumns(), ','));
-			hm.put("springbootcolumns", StringUtils.listToDBColumsString(table.getColumns(), ',').substring(StringUtils.listToDBColumsString(table.getColumns(), ',').indexOf(",")+1));
+			hm.put("springbootcolumns", StringUtils.listToDBColumsString(table.getColumns(), ',').substring(StringUtils.listToDBColumsString(table.getColumns(), ',').indexOf(",") + 1));
 			String entityjava = VelocityUtils.mergeTemplate(hm, "springbootEntityDao.vm");
-			File f = new File(GlobalsParam.ENTITY_REPOSITORYFILEPATH +IConstants.SYMBOL_SLASH+ table.getUpperCaseName()+ "Mapper.java");
+			File f = new File(GlobalsParam.ENTITY_REPOSITORYFILEPATH + IConstants.SYMBOL_SLASH + table.getUpperCaseName() + "Mapper.java");
 			FileOutputStream fos = new FileOutputStream(f);
 			OutputStreamWriter osw = new OutputStreamWriter(fos,
 					"UTF-8");
@@ -32,7 +32,7 @@ public class SpringBootDAOCreater {
 			bw.write(entityjava);
 			bw.flush();
 			bw.close();
-			fos.close();			
+			fos.close();
 //			//Mappers映射信息
 //			hm.put("columns", StringUtils.listToString(table.getColumns(), ','));
 //			entityjava = VelocityUtils.mergeTemplate(hm, "mapper.vm");
@@ -48,7 +48,7 @@ public class SpringBootDAOCreater {
 			//动态sql语句信息
 			hm.put("columns", StringUtils.listToString(table.getColumns(), ','));
 			entityjava = VelocityUtils.mergeTemplate(hm, "springbootDynaSql.vm");
-			f = new File(GlobalsParam.ENTITY_DYSQLFILEPATH +IConstants.SYMBOL_SLASH+ table.getUpperCaseName()+ "Sql.java");
+			f = new File(GlobalsParam.ENTITY_DYSQLFILEPATH + IConstants.SYMBOL_SLASH + table.getUpperCaseName() + "Sql.java");
 			fos = new FileOutputStream(f);
 			osw = new OutputStreamWriter(fos,
 					"UTF-8");

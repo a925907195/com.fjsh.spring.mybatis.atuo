@@ -15,30 +15,30 @@ import java.util.Map;
 
 public class SpringBootTestCreater {
 
-	public static void createBaseTest(Table table) {
-		try {
-			Map<String, Object> hm = new HashMap<String, Object>();
-			hm.put("package", GlobalsParam.getPreference("basepackage"));
-			hm.put("table", table);
-			hm.put("datetime", IConstants.CURRENT_TIME);
+    public static void createBaseTest(Table table) {
+        try {
+            Map<String, Object> hm = new HashMap<String, Object>();
+            hm.put("package", GlobalsParam.getPreference("basepackage"));
+            hm.put("table", table);
+            hm.put("datetime", IConstants.CURRENT_TIME);
 
-			//test Service
-			hm.put("columns", StringUtils.listToString(table.getColumns(), ','));
-			String entityjava = VelocityUtils.mergeTemplate(hm, "test/testentitySpringboot.vm");
-			File f = new File(GlobalsParam.TEST_SERVICE+IConstants.SYMBOL_SLASH+ table.getUpperCaseName()+ "MapperTest.java");
-			FileOutputStream fos = new FileOutputStream(f);
-			OutputStreamWriter osw = new OutputStreamWriter(fos,
-					"UTF-8");
-			BufferedWriter bw = new BufferedWriter(osw);
-			bw.write(entityjava);
-			bw.flush();
-			bw.close();
-			fos.close();
-			
+            //test Service
+            hm.put("columns", StringUtils.listToString(table.getColumns(), ','));
+            String entityjava = VelocityUtils.mergeTemplate(hm, "test/testentitySpringboot.vm");
+            File f = new File(GlobalsParam.TEST_SERVICE + IConstants.SYMBOL_SLASH + table.getUpperCaseName() + "MapperTest.java");
+            FileOutputStream fos = new FileOutputStream(f);
+            OutputStreamWriter osw = new OutputStreamWriter(fos,
+                    "UTF-8");
+            BufferedWriter bw = new BufferedWriter(osw);
+            bw.write(entityjava);
+            bw.flush();
+            bw.close();
+            fos.close();
 
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-	}
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 
 }

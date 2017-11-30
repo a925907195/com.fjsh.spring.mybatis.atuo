@@ -1,459 +1,244 @@
-2017-11-06 19:56:25,649 - ResourceManager : found startApp.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:56:25,650 - ResourceManager : found jpaConfig.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:56:25,652 - ResourceManager : found log4jproperties,vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:56:25,654 - Null reference [template 'log4jproperties,vm', line 20, column 30] : ${catalina.base} cannot be resolved.
-2017-11-06 19:56:25,655 - ResourceManager : found spring-dao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:56:25,655 - Null reference [template 'spring-dao.vm', line 42, column 49] : ${mysql.jdbc.driver} cannot be resolved.
-2017-11-06 19:56:25,655 - Null reference [template 'spring-dao.vm', line 43, column 37] : ${mysql.jdbc.url} cannot be resolved.
-2017-11-06 19:56:25,656 - Null reference [template 'spring-dao.vm', line 44, column 42] : ${mysql.jdbc.username} cannot be resolved.
-2017-11-06 19:56:25,656 - Null reference [template 'spring-dao.vm', line 45, column 42] : ${mysql.jdbc.password} cannot be resolved.
-2017-11-06 19:56:25,657 - ResourceManager : found spring-service.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:56:25,658 - ResourceManager : found spring.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:56:25,660 - ResourceManager : found db.properties.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:56:25,662 - ResourceManager : found springbootpom.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,199 - Log4JLogChute initialized using file 'velocity.log'
-2017-11-06 19:57:20,199 - The version of log4j being used does not support the "trace" level.
-2017-11-06 19:57:20,199 - Initializing Velocity, Calling init()...
-2017-11-06 19:57:20,199 - *******************************************************************
-2017-11-06 19:57:20,199 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-11-06 19:57:20,199 - RuntimeInstance initializing.
-2017-11-06 19:57:20,199 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2017-11-06 19:57:20,199 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-11-06 19:57:20,199 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-11-06 19:57:20,199 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-11-06 19:57:20,199 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-11-06 19:57:20,201 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2017-11-06 19:57:20,204 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,204 - FileResourceLoader : initialization starting.
-2017-11-06 19:57:20,204 - Do unicode file recognition:  false
-2017-11-06 19:57:20,204 - FileResourceLoader : adding path 'config/template'
-2017-11-06 19:57:20,204 - FileResourceLoader : initialization complete.
-2017-11-06 19:57:20,209 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-11-06 19:57:20,209 - Default ResourceManager initialization complete.
-2017-11-06 19:57:20,210 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-11-06 19:57:20,211 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-11-06 19:57:20,212 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-11-06 19:57:20,212 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-11-06 19:57:20,213 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-11-06 19:57:20,214 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-11-06 19:57:20,214 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-11-06 19:57:20,215 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-11-06 19:57:20,216 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-11-06 19:57:20,244 - Created '20' parsers.
-2017-11-06 19:57:20,248 - Velocimacro : initialization starting.
-2017-11-06 19:57:20,248 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-11-06 19:57:20,248 - Velocimacro : Default library not found.
-2017-11-06 19:57:20,248 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-11-06 19:57:20,248 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-11-06 19:57:20,248 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-11-06 19:57:20,248 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-11-06 19:57:20,248 - Velocimacro : Velocimacro : initialization complete.
-2017-11-06 19:57:20,248 - RuntimeInstance successfully initialized.
-2017-11-06 19:57:20,264 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,293 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,307 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,312 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,314 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,320 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,323 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,324 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,328 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,335 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,338 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,340 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,341 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,348 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,351 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,353 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,356 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,367 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,373 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,374 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,376 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,383 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,388 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,390 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,392 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,401 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,411 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,414 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,416 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,420 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,425 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,431 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,441 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,451 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,455 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,457 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,458 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,465 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,469 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,471 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,472 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,477 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,482 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,483 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,485 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,515 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,525 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,546 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,552 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,558 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,564 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,566 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,567 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,570 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,573 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,574 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,575 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,579 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,582 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,583 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,585 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,588 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,591 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,592 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,598 - ResourceManager : found startApp.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,598 - ResourceManager : found jpaConfig.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,601 - ResourceManager : found log4jproperties,vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,602 - Null reference [template 'log4jproperties,vm', line 20, column 30] : ${catalina.base} cannot be resolved.
-2017-11-06 19:57:20,604 - ResourceManager : found spring-dao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,604 - Null reference [template 'spring-dao.vm', line 42, column 49] : ${mysql.jdbc.driver} cannot be resolved.
-2017-11-06 19:57:20,604 - Null reference [template 'spring-dao.vm', line 43, column 37] : ${mysql.jdbc.url} cannot be resolved.
-2017-11-06 19:57:20,604 - Null reference [template 'spring-dao.vm', line 44, column 42] : ${mysql.jdbc.username} cannot be resolved.
-2017-11-06 19:57:20,604 - Null reference [template 'spring-dao.vm', line 45, column 42] : ${mysql.jdbc.password} cannot be resolved.
-2017-11-06 19:57:20,605 - ResourceManager : found spring-service.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,606 - ResourceManager : found spring.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,607 - ResourceManager : found springbootdb.properties.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 19:57:20,609 - ResourceManager : found springbootpom.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,334 - Log4JLogChute initialized using file 'velocity.log'
-2017-11-06 20:01:51,334 - The version of log4j being used does not support the "trace" level.
-2017-11-06 20:01:51,334 - Initializing Velocity, Calling init()...
-2017-11-06 20:01:51,334 - *******************************************************************
-2017-11-06 20:01:51,334 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-11-06 20:01:51,334 - RuntimeInstance initializing.
-2017-11-06 20:01:51,334 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2017-11-06 20:01:51,334 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-11-06 20:01:51,334 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-11-06 20:01:51,334 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-11-06 20:01:51,334 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-11-06 20:01:51,336 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2017-11-06 20:01:51,339 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,340 - FileResourceLoader : initialization starting.
-2017-11-06 20:01:51,340 - Do unicode file recognition:  false
-2017-11-06 20:01:51,340 - FileResourceLoader : adding path 'config/template'
-2017-11-06 20:01:51,340 - FileResourceLoader : initialization complete.
-2017-11-06 20:01:51,346 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-11-06 20:01:51,346 - Default ResourceManager initialization complete.
-2017-11-06 20:01:51,348 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-11-06 20:01:51,349 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-11-06 20:01:51,349 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-11-06 20:01:51,350 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-11-06 20:01:51,351 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-11-06 20:01:51,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-11-06 20:01:51,353 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-11-06 20:01:51,354 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-11-06 20:01:51,354 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-11-06 20:01:51,379 - Created '20' parsers.
-2017-11-06 20:01:51,384 - Velocimacro : initialization starting.
-2017-11-06 20:01:51,384 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-11-06 20:01:51,384 - Velocimacro : Default library not found.
-2017-11-06 20:01:51,384 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-11-06 20:01:51,384 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-11-06 20:01:51,385 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-11-06 20:01:51,385 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-11-06 20:01:51,385 - Velocimacro : Velocimacro : initialization complete.
-2017-11-06 20:01:51,385 - RuntimeInstance successfully initialized.
-2017-11-06 20:01:51,407 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,442 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,459 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,464 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,466 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,471 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,479 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,481 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,483 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,489 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,495 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,497 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,498 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,503 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,507 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,509 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,513 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,520 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,524 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,528 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,531 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,536 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,541 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,546 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,549 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,555 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,568 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,569 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,571 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,577 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,584 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,585 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,587 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,590 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,596 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,598 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,602 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,614 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,619 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,620 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,621 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,628 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,633 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,636 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,637 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,642 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,648 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,650 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,652 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,660 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,666 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,668 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,669 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,674 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,679 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,681 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,688 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,701 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,704 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,705 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,707 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,711 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,717 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,719 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,722 - ResourceManager : found startApp.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,723 - ResourceManager : found jpaConfig.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,726 - ResourceManager : found log4jproperties,vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,727 - Null reference [template 'log4jproperties,vm', line 20, column 30] : ${catalina.base} cannot be resolved.
-2017-11-06 20:01:51,728 - ResourceManager : found spring-dao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,728 - Null reference [template 'spring-dao.vm', line 42, column 49] : ${mysql.jdbc.driver} cannot be resolved.
-2017-11-06 20:01:51,728 - Null reference [template 'spring-dao.vm', line 43, column 37] : ${mysql.jdbc.url} cannot be resolved.
-2017-11-06 20:01:51,728 - Null reference [template 'spring-dao.vm', line 44, column 42] : ${mysql.jdbc.username} cannot be resolved.
-2017-11-06 20:01:51,728 - Null reference [template 'spring-dao.vm', line 45, column 42] : ${mysql.jdbc.password} cannot be resolved.
-2017-11-06 20:01:51,730 - ResourceManager : found spring-service.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,732 - ResourceManager : found spring.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,733 - ResourceManager : found springbootdb.properties.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:01:51,735 - ResourceManager : found springbootpom.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,159 - Log4JLogChute initialized using file 'velocity.log'
-2017-11-06 20:07:51,159 - The version of log4j being used does not support the "trace" level.
-2017-11-06 20:07:51,160 - Initializing Velocity, Calling init()...
-2017-11-06 20:07:51,160 - *******************************************************************
-2017-11-06 20:07:51,160 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-11-06 20:07:51,160 - RuntimeInstance initializing.
-2017-11-06 20:07:51,160 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2017-11-06 20:07:51,160 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-11-06 20:07:51,160 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-11-06 20:07:51,160 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-11-06 20:07:51,160 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-11-06 20:07:51,161 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2017-11-06 20:07:51,164 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,165 - FileResourceLoader : initialization starting.
-2017-11-06 20:07:51,165 - Do unicode file recognition:  false
-2017-11-06 20:07:51,165 - FileResourceLoader : adding path 'config/template'
-2017-11-06 20:07:51,165 - FileResourceLoader : initialization complete.
-2017-11-06 20:07:51,170 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-11-06 20:07:51,170 - Default ResourceManager initialization complete.
-2017-11-06 20:07:51,171 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-11-06 20:07:51,172 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-11-06 20:07:51,172 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-11-06 20:07:51,173 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-11-06 20:07:51,173 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-11-06 20:07:51,174 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-11-06 20:07:51,175 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-11-06 20:07:51,176 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-11-06 20:07:51,176 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-11-06 20:07:51,200 - Created '20' parsers.
-2017-11-06 20:07:51,204 - Velocimacro : initialization starting.
-2017-11-06 20:07:51,204 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-11-06 20:07:51,204 - Velocimacro : Default library not found.
-2017-11-06 20:07:51,204 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-11-06 20:07:51,204 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-11-06 20:07:51,204 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-11-06 20:07:51,205 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-11-06 20:07:51,205 - Velocimacro : Velocimacro : initialization complete.
-2017-11-06 20:07:51,205 - RuntimeInstance successfully initialized.
-2017-11-06 20:07:51,219 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,241 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,256 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,260 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,263 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,270 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,274 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,276 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,277 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,286 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,290 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,291 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,293 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,296 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,299 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,302 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,304 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,308 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,312 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,314 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,317 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,324 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,327 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,328 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,330 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,339 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,351 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,353 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,355 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,359 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,363 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,364 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,367 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,373 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,378 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,379 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,381 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,389 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,393 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,394 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,395 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,401 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,405 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,407 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,408 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,411 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,417 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,421 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,425 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,430 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,438 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,439 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,441 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,444 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,453 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,455 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,456 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,460 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,471 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,472 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,473 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,477 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,479 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,480 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,482 - ResourceManager : found startApp.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,485 - ResourceManager : found jpaConfig.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,488 - ResourceManager : found log4jproperties,vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,490 - Null reference [template 'log4jproperties,vm', line 20, column 30] : ${catalina.base} cannot be resolved.
-2017-11-06 20:07:51,490 - ResourceManager : found springbootdb.properties.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:07:51,493 - ResourceManager : found springbootpom.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,200 - Log4JLogChute initialized using file 'velocity.log'
-2017-11-06 20:09:52,200 - The version of log4j being used does not support the "trace" level.
-2017-11-06 20:09:52,200 - Initializing Velocity, Calling init()...
-2017-11-06 20:09:52,200 - *******************************************************************
-2017-11-06 20:09:52,200 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-11-06 20:09:52,200 - RuntimeInstance initializing.
-2017-11-06 20:09:52,200 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2017-11-06 20:09:52,200 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-11-06 20:09:52,200 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-11-06 20:09:52,200 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-11-06 20:09:52,200 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-11-06 20:09:52,202 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2017-11-06 20:09:52,204 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,205 - FileResourceLoader : initialization starting.
-2017-11-06 20:09:52,205 - Do unicode file recognition:  false
-2017-11-06 20:09:52,205 - FileResourceLoader : adding path 'config/template'
-2017-11-06 20:09:52,205 - FileResourceLoader : initialization complete.
-2017-11-06 20:09:52,212 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-11-06 20:09:52,212 - Default ResourceManager initialization complete.
-2017-11-06 20:09:52,213 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-11-06 20:09:52,213 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-11-06 20:09:52,214 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-11-06 20:09:52,215 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-11-06 20:09:52,215 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-11-06 20:09:52,216 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-11-06 20:09:52,217 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-11-06 20:09:52,217 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-11-06 20:09:52,218 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-11-06 20:09:52,245 - Created '20' parsers.
-2017-11-06 20:09:52,249 - Velocimacro : initialization starting.
-2017-11-06 20:09:52,249 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-11-06 20:09:52,249 - Velocimacro : Default library not found.
-2017-11-06 20:09:52,249 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-11-06 20:09:52,249 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-11-06 20:09:52,249 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-11-06 20:09:52,249 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-11-06 20:09:52,249 - Velocimacro : Velocimacro : initialization complete.
-2017-11-06 20:09:52,249 - RuntimeInstance successfully initialized.
-2017-11-06 20:09:52,267 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,295 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,308 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,312 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,315 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,322 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,324 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,325 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,326 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,333 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,336 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,338 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,339 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,346 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,352 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,354 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,355 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,359 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,365 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,368 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,370 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,375 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,382 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,385 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,388 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,393 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,405 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,407 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,410 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,420 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,426 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,428 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,429 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,437 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,440 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,442 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,443 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,451 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,456 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,458 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,459 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,465 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,470 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,472 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,473 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,476 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,482 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,485 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,487 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,491 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,493 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,494 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,498 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,504 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,506 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,508 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,509 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,511 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,517 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,520 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,523 - ResourceManager : found springbootentity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,530 - ResourceManager : found springbootEntityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,536 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,538 - ResourceManager : found test/testentitySpringboot.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,541 - ResourceManager : found startApp.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,542 - ResourceManager : found jpaConfig.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,545 - ResourceManager : found log4jproperties,vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,549 - Null reference [template 'log4jproperties,vm', line 20, column 30] : ${catalina.base} cannot be resolved.
-2017-11-06 20:09:52,552 - ResourceManager : found springbootdb.properties.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2017-11-06 20:09:52,555 - ResourceManager : found springbootpom.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,480 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,482 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,483 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,486 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,488 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,489 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,490 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,491 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,492 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,494 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,497 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,499 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,501 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,502 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,503 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,504 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,508 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,511 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,516 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,517 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,518 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,522 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,526 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,529 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,532 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,538 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,541 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,543 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,545 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,547 - ResourceManager : found web/IndexController.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,548 - ResourceManager : found web/DemoController.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,561 - ResourceManager : found web/log4jproperties,vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,562 - Null reference [template 'web/log4jproperties,vm', line 20, column 30] : ${catalina.base} cannot be resolved.
+2017-11-27 16:02:11,563 - ResourceManager : found spring-dao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,564 - Null reference [template 'spring-dao.vm', line 42, column 49] : ${mysql.jdbc.driver} cannot be resolved.
+2017-11-27 16:02:11,564 - Null reference [template 'spring-dao.vm', line 43, column 37] : ${mysql.jdbc.url} cannot be resolved.
+2017-11-27 16:02:11,564 - Null reference [template 'spring-dao.vm', line 44, column 42] : ${mysql.jdbc.username} cannot be resolved.
+2017-11-27 16:02:11,564 - Null reference [template 'spring-dao.vm', line 45, column 42] : ${mysql.jdbc.password} cannot be resolved.
+2017-11-27 16:02:11,565 - ResourceManager : found spring-mvc.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,566 - ResourceManager : found spring-service.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,567 - ResourceManager : found web/springmvc-spring.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,568 - ResourceManager : found db.properties.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,571 - ResourceManager : found web/springMVCPom.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 25, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 31, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 37, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 43, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 49, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 55, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 61, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 67, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 73, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 79, column 34] : ${org.aspectj.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 84, column 34] : ${org.aspectj.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 103, column 34] : ${mybatis.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 197, column 34] : ${log4j.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 202, column 34] : ${slf4j.version} cannot be resolved.
+2017-11-27 16:02:11,571 - Null reference [template 'web/springMVCPom.vm', line 207, column 34] : ${slf4j.version} cannot be resolved.
+2017-11-27 16:04:30,970 - Log4JLogChute initialized using file 'velocity.log'
+2017-11-27 16:04:30,971 - The version of log4j being used does not support the "trace" level.
+2017-11-27 16:04:30,971 - Initializing Velocity, Calling init()...
+2017-11-27 16:04:30,971 - *******************************************************************
+2017-11-27 16:04:30,971 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-11-27 16:04:30,971 - RuntimeInstance initializing.
+2017-11-27 16:04:30,971 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2017-11-27 16:04:30,971 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-11-27 16:04:30,971 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-11-27 16:04:30,971 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-11-27 16:04:30,972 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-11-27 16:04:30,974 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2017-11-27 16:04:30,977 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:30,978 - FileResourceLoader : initialization starting.
+2017-11-27 16:04:30,978 - Do unicode file recognition:  false
+2017-11-27 16:04:30,978 - FileResourceLoader : adding path 'config/template'
+2017-11-27 16:04:30,978 - FileResourceLoader : initialization complete.
+2017-11-27 16:04:30,988 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-11-27 16:04:30,988 - Default ResourceManager initialization complete.
+2017-11-27 16:04:30,990 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-11-27 16:04:30,991 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-11-27 16:04:30,991 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-11-27 16:04:30,992 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-11-27 16:04:30,993 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-11-27 16:04:30,994 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-11-27 16:04:30,996 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-11-27 16:04:30,997 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-11-27 16:04:30,998 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-11-27 16:04:31,032 - Created '20' parsers.
+2017-11-27 16:04:31,036 - Velocimacro : initialization starting.
+2017-11-27 16:04:31,036 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-11-27 16:04:31,036 - Velocimacro : Default library not found.
+2017-11-27 16:04:31,037 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-11-27 16:04:31,037 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-11-27 16:04:31,037 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-11-27 16:04:31,037 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-11-27 16:04:31,037 - Velocimacro : Velocimacro : initialization complete.
+2017-11-27 16:04:31,037 - RuntimeInstance successfully initialized.
+2017-11-27 16:04:31,052 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,071 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,084 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,092 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,094 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,096 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,097 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,100 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,104 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,108 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,112 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,113 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,115 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,116 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,118 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,120 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,124 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,127 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,129 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,130 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,132 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,133 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,137 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,141 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,145 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,146 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,147 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,148 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,150 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,152 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,157 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,160 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,161 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,162 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,163 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,165 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,167 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,172 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,179 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,182 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,186 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,189 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,193 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,198 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,207 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,214 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,216 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,219 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,222 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,225 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,229 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,236 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,244 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,245 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,247 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,248 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,250 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,252 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,256 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,258 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,259 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,260 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,261 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,262 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,264 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,267 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,269 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,270 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,272 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,273 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,275 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,277 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,282 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,285 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,286 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,288 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,289 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,291 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,292 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,296 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,298 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,298 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,299 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,300 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,302 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,304 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,307 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,309 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,310 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,312 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,313 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,314 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,316 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,319 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,321 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,322 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,324 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,325 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,326 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,328 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,332 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,334 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,336 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,337 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,338 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,340 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,344 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,349 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,353 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,354 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,355 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,355 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,356 - ResourceManager : found entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,358 - ResourceManager : found entityDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,361 - ResourceManager : found mapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,363 - ResourceManager : found springbootDynaSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,364 - ResourceManager : found entityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,365 - ResourceManager : found entityServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,366 - ResourceManager : found test/testentityService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,368 - ResourceManager : found web/IndexController.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,369 - ResourceManager : found web/DemoController.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,377 - ResourceManager : found web/log4jproperties,vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,378 - Null reference [template 'web/log4jproperties,vm', line 20, column 30] : ${catalina.base} cannot be resolved.
+2017-11-27 16:04:31,380 - ResourceManager : found spring-dao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,380 - Null reference [template 'spring-dao.vm', line 42, column 49] : ${mysql.jdbc.driver} cannot be resolved.
+2017-11-27 16:04:31,380 - Null reference [template 'spring-dao.vm', line 43, column 37] : ${mysql.jdbc.url} cannot be resolved.
+2017-11-27 16:04:31,380 - Null reference [template 'spring-dao.vm', line 44, column 42] : ${mysql.jdbc.username} cannot be resolved.
+2017-11-27 16:04:31,380 - Null reference [template 'spring-dao.vm', line 45, column 42] : ${mysql.jdbc.password} cannot be resolved.
+2017-11-27 16:04:31,381 - ResourceManager : found spring-mvc.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,382 - ResourceManager : found spring-service.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,384 - ResourceManager : found web/springmvc-spring.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,384 - ResourceManager : found db.properties.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,387 - ResourceManager : found web/springMVCPom.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 25, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 31, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 37, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 43, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 49, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 55, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 61, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 67, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 73, column 34] : ${spring.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 79, column 34] : ${org.aspectj.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 84, column 34] : ${org.aspectj.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 103, column 34] : ${mybatis.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 197, column 34] : ${log4j.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 202, column 34] : ${slf4j.version} cannot be resolved.
+2017-11-27 16:04:31,388 - Null reference [template 'web/springMVCPom.vm', line 207, column 34] : ${slf4j.version} cannot be resolved.

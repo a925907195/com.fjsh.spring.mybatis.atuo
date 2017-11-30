@@ -18,7 +18,6 @@ public class StringUtils {
 
 	/**
 	 * 将列表转换为字符串并分割
-	 * @param list
 	 * @param separator
 	 * @return
 	 */
@@ -31,7 +30,6 @@ public class StringUtils {
 	}
 	/**
 	 * 将列表转换为字符串并分割
-	 * @param list
 	 * @param separator
 	 * @return
 	 */
