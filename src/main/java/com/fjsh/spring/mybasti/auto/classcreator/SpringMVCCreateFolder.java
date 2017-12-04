@@ -67,6 +67,28 @@ public class SpringMVCCreateFolder {
         f = new File(folder);
         if (!f.exists())
             f.mkdirs();
+       /* //create repository folder
+        folder = GlobalsParam.getPreference("outputfolder")
+                + "/"
+                + GlobalsParam.getPreference("basejavafolder").replaceAll(
+                "\\.", "/")
+                + "/"
+                + GlobalsParam.getPreference("basepackage").replaceAll("\\.",
+                "/") + "/" + "repository";
+        f = new File(folder);
+        if (!f.exists())
+            f.mkdirs();
+        //create dynamicsql folder
+        folder = GlobalsParam.getPreference("outputfolder")
+                + "/"
+                + GlobalsParam.getPreference("basejavafolder").replaceAll(
+                "\\.", "/")
+                + "/"
+                + GlobalsParam.getPreference("basepackage").replaceAll("\\.",
+                "/") + "/" + "dynamicsql";
+        f = new File(folder);
+        if (!f.exists())
+            f.mkdirs();*/
         //create service folder
         folder = GlobalsParam.getPreference("outputfolder")
                 + "/"

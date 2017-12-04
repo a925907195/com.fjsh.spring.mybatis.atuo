@@ -32,7 +32,7 @@ public class BaseEntityDAOCreater {
             bw.close();
             fos.close();
             //Mappers映射信息
-            hm.put("columns", StringUtils.listToString(table.getColumns(), ','));
+            hm.put("columns", StringUtils.listToDBColumn(table.getColumns(), ','));
             entityjava = VelocityUtils.mergeTemplate(hm, "mapper.vm");
             f = new File(GlobalsParam.RESOURCE_FOLDER + IConstants.SYMBOL_SLASH + GlobalsParam.getPreference("Mappersfolder") + IConstants.SYMBOL_SLASH + table.getUpperCaseName() + "Mapper.xml");
             fos = new FileOutputStream(f);

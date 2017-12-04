@@ -1,5 +1,6 @@
 package com.fjsh.spring.mybasti.auto.creater;
 
+import com.fjsh.spring.mybasti.auto.classcreator.ControllerDemoCreater;
 import com.fjsh.spring.mybasti.auto.classcreator.springboot.*;
 import com.fjsh.spring.mybasti.auto.db.DbUtils;
 import com.fjsh.spring.mybasti.auto.db.Table;
@@ -29,6 +30,8 @@ public class SpringBootCreator {
             // 生成基本的测试接口
             SpringBootTestCreater.createBaseTest(td);
         }
+        // 生成controller基础文件并将web基础配置文件拷贝到目的项目文件
+        ControllerDemoCreater.createControllerFile();
         //生成基础app运行程序以及jpaconfig配置文件
         SpringBootBaseClassCreater.createClasses(tablelist);
         // 生成配置文件

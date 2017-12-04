@@ -13,7 +13,6 @@ import ${package}.service.$!{table.getUpperCaseName()}Service;
  * @Date ${datetime}
  * @since JRE 1.6.0_22  or higher
  */
-@Service
 public class $!{table.getUpperCaseName()}ServiceImpl implements $!{table.getUpperCaseName()}Service {
 
 	@Resource

@@ -4,9 +4,9 @@
  <resultMap id="BaseResultMap" type="${package}.entity.$!{table.getUpperCaseName()}Entity" >
  #foreach($col in $!table.columns)
 #if($!{col.pk}=="1")
-<id column="$!{col.dbname}" property="$!{col.javaname}" jdbcType="$!{col.dbType}" />
+<id  property="$!{col.javaname}" column="$!{col.dbname}" jdbcType="$!{col.dbType}" />
 #else
-<result column="$!{col.dbname}" property="$!{col.javaname}" jdbcType="$!{col.dbType}" />
+<result  property="$!{col.javaname}" column="$!{col.dbname}" jdbcType="$!{col.dbType}" />
 #end
 #end   
   </resultMap>

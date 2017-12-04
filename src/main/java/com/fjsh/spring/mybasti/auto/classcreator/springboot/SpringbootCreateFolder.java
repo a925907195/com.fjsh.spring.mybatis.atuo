@@ -27,6 +27,17 @@ public class SpringbootCreateFolder {
         if (!f.exists())
             f.mkdirs();
 
+        //controller
+        folder = GlobalsParam.getPreference("outputfolder")
+                + "/"
+                + GlobalsParam.getPreference("basejavafolder").replaceAll(
+                "\\.", "/")
+                + "/"
+                + GlobalsParam.getPreference("basepackage").replaceAll("\\.",
+                "/") + "/" + "controller";
+        f = new File(folder);
+        if (!f.exists())
+            f.mkdirs();
         //FileUtils.copyFile(new File(GlobalsParam.getPreference("localproject")+"config/project/mysql.properties"), new File(folder+"/mysql.properties"));
         //FileUtils.copyFile(new File(GlobalsParam.getPreference("localproject")+"config/project/swap.config"), new File(folder+"/swap.config"));
 
@@ -41,7 +52,7 @@ public class SpringbootCreateFolder {
         if (!f.exists())
             f.mkdirs();
 
-
+        //create repository folder
         folder = GlobalsParam.getPreference("outputfolder")
                 + "/"
                 + GlobalsParam.getPreference("basejavafolder").replaceAll(

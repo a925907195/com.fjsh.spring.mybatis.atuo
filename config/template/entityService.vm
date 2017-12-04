@@ -1,5 +1,6 @@
 package ${package}.service;
 
+import org.springframework.stereotype.Service;
 import ${package}.entity.$!{table.getUpperCaseName()}Entity;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @Date ${datetime}
  * @since JRE 1.6.0_22  or higher
  */
+@Service
 public interface $!{table.getUpperCaseName()}Service {
     /**
      * 根据主键id删除数据

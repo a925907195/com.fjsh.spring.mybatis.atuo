@@ -29,6 +29,18 @@ public class StringUtils {
 		return sb.toString().substring(0, sb.toString().length() - 1);
 	}
 	/**
+	 * 将数据库中列表转换为字符串并分割
+	 * @param separator
+	 * @return
+	 */
+	public static String listToDBColumn(List<Column> columns, char separator) {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < columns.size(); i++) {
+			sb.append(columns.get(i).getDbname()).append(separator);
+		}
+		return sb.toString().substring(0, sb.toString().length() - 1);
+	}
+	/**
 	 * 将列表转换为字符串并分割
 	 * @param separator
 	 * @return
