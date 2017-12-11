@@ -18,7 +18,7 @@ public interface $!{table.getUpperCaseName()}Mapper {
      * @param id
      * @return
      */
-    @Delete("DELETE FROM table.dbtablename WHERE id = #{id}")
+    @Delete("DELETE FROM $!{table.dbtablename} WHERE id = #{id}")
     int deleteByPrimaryKey(Long id);
 
     /**
